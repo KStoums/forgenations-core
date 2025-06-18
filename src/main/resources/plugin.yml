@@ -1,0 +1,38 @@
+name: forgenationscore
+version: '1.0.0'
+main: fr.kstars.forgenationscore.Forgenationscore
+api-version: '1.21'
+author: Kstars
+commands:
+  clear:
+    description: Delete your own or a target player's inventory
+    aliases: [ci]
+    permission: clear.use
+  feed:
+    description: Restores the hunger of yourself or a target player
+    permission: feed.use
+  fly:
+    description: Activates or deactivates the fly to you or a target player
+    permission: fly.use
+  gamemode:
+    description: Changes your own or another player's game mode
+    aliases: [gm]
+    permission: gamemode.use
+  heal:
+    description: Heals yourself or a target player
+    permission: heal.use
+  kick:
+    description: Exclude a person from the server
+    permission: kick.use
+  kill:
+    description: Kills yourself or a target player
+    permission: kill.use
+  spawn:
+    description: Teleports you to the spawn point
+  teleport:
+    description: Teleports yourself or another player to a target player
+    aliases: [tp]
+    permission: teleport.use
+  worldchange:
+    description: Transport yourself from one world to another
+    permission: worldchange.use
