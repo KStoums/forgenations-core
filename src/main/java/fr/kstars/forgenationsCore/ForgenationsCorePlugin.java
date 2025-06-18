@@ -41,6 +41,7 @@ public final class ForgenationsCorePlugin extends JavaPlugin {
             Objects.requireNonNull(getCommand("worldchange")).setExecutor(new WorldChangeCommand());
 
             //Events
+            //TODO ADD EVENT WHEN PLAYER DIE WHEN RESPAWN IS TELEPORTED TO WORLD SPAWN LOCATION
             getServer().getPluginManager().registerEvents(new AsyncChatListener(), this);
             getServer().getPluginManager().registerEvents(new EntityDamageListener(), this);
             getServer().getPluginManager().registerEvents(new PlayerJoinListener(jsonPlayerRepository), this);
