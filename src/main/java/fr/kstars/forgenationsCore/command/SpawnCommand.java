@@ -27,7 +27,7 @@ public class SpawnCommand implements CommandExecutor {
 
         player.teleport(WordSpawnLocation);
         player.sendMessage(ChatUtil.PLUGIN_PREFIX_WITH_COLOR.
-                append(Component.text("Vous avez été téléporté au spawn",  NamedTextColor.WHITE).
+                append(Component.text("Vous avez été téléporté au spawn.",  NamedTextColor.WHITE).
                         decoration(TextDecoration.BOLD, false)));
         player.playSound(player.getLocation(), Sound.ENTITY_ENDERMAN_TELEPORT, 1, 1);
         return true;

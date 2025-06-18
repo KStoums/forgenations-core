@@ -20,11 +20,6 @@ public class KickCommand implements CommandExecutor {
             return false;
         }
 
-        if (!player.isOp()) {
-            player.sendMessage(ChatUtil.ERR_NO_PERMISSION);
-            return false;
-        }
-
         if (args.length == 0) {
             player.sendMessage(ChatUtil.USAGE_PREFIX.
                     append(Component.text("/kick <joueur> <raison>")));

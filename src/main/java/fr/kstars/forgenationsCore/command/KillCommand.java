@@ -18,11 +18,6 @@ public class KillCommand implements CommandExecutor {
             return false;
         }
 
-        if (!player.isOp()) {
-            player.sendMessage(ChatUtil.ERR_NO_PERMISSION);
-            return false;
-        }
-
         if (args.length > 1) {
             player.sendMessage(ChatUtil.USAGE_PREFIX.
                     append(Component.text("/kill <joueur> [OPTIONNEL]")));
@@ -54,7 +49,6 @@ public class KillCommand implements CommandExecutor {
                     appendSpace().
                     append(Component.text(targetPlayer.getName(), NamedTextColor.BLUE).
                             decoration(TextDecoration.BOLD, false)).
-                    appendSpace().
                     append(Component.text(".", NamedTextColor.WHITE).
                             decoration(TextDecoration.BOLD, false)));
             return true;

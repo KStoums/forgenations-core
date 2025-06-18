@@ -47,7 +47,12 @@ public class TeleportCommand implements CommandExecutor {
                     append(Component.text(destinationPlayer.getName(), NamedTextColor.BLUE).
                             decoration(TextDecoration.BOLD, false)).
                     appendSpace().
-                    append(Component.text("par un Maître du Jeu.", NamedTextColor.WHITE).
+                    append(Component.text("par un", NamedTextColor.WHITE).
+                            decoration(TextDecoration.BOLD, false)).
+                    appendSpace().
+                    append(Component.text("Maître du Jeu", NamedTextColor.BLUE).
+                            decoration(TextDecoration.BOLD, false)).
+                    append(Component.text(".", NamedTextColor.BLUE).
                             decoration(TextDecoration.BOLD, false)));
             targetPlayer.playSound(targetPlayer.getLocation(), Sound.ENTITY_ENDERMAN_TELEPORT, 1, 1);
             return true;
@@ -60,7 +65,6 @@ public class TeleportCommand implements CommandExecutor {
                 appendSpace().
                 append(Component.text(targetPlayer.getName(), NamedTextColor.BLUE).
                         decoration(TextDecoration.BOLD, false)).
-                appendSpace().
                 append(Component.text(".", NamedTextColor.WHITE).
                         decoration(TextDecoration.BOLD, false)));
         player.playSound(player.getLocation(), Sound.ENTITY_ENDERMAN_TELEPORT, 1, 1);
