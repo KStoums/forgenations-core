@@ -1,4 +1,4 @@
-name: forgenationscore
+name: forgenations-core
 version: '1.0.0'
 main: fr.kstars.forgenationsCore.ForgenationsCorePlugin
 api-version: '1.21'

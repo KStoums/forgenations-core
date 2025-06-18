@@ -75,7 +75,8 @@ public class ClearCommand implements CommandExecutor {
                 append(Component.text("supprimé", NamedTextColor.BLUE).
                         decoration(TextDecoration.BOLD, false)).
                 appendSpace().
-                append(Component.text("votre inventaire.", NamedTextColor.WHITE)));
+                append(Component.text("votre inventaire.", NamedTextColor.WHITE).
+                        decoration(TextDecoration.BOLD, false)));
         player.playSound(player.getLocation(), Sound.BLOCK_LAVA_EXTINGUISH, 1, 1);
         return true;
     }
