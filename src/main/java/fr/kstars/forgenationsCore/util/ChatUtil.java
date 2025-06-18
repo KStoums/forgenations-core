@@ -1,4 +1,4 @@
-package fr.kstars.forgenationscore.util;
+package fr.kstars.forgenationsCore.util;
 
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.format.NamedTextColor;

@@ -1,6 +1,6 @@
-package fr.kstars.forgenationscore.command;
+package fr.kstars.forgenationsCore.command;
 
-import fr.kstars.forgenationscore.util.ChatUtil;
+import fr.kstars.forgenationsCore.util.ChatUtil;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.format.NamedTextColor;
 import net.kyori.adventure.text.format.TextDecoration;

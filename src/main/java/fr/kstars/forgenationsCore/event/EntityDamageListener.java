@@ -1,7 +1,7 @@
-package fr.kstars.forgenationscore.event;
+package fr.kstars.forgenationsCore.event;
 
-import fr.kstars.forgenationscore.command.SpawnCommand;
-import fr.kstars.forgenationscore.util.ChatUtil;
+import fr.kstars.forgenationsCore.command.SpawnCommand;
+import fr.kstars.forgenationsCore.util.ChatUtil;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.format.NamedTextColor;
 import net.kyori.adventure.text.format.TextDecoration;

@@ -1,7 +1,7 @@
-package fr.kstars.forgenationscore.event;
+package fr.kstars.forgenationsCore.event;
 
-import fr.kstars.forgenationscore.model.Scoreboard;
-import fr.kstars.forgenationscore.model.Tablist;
+import fr.kstars.forgenationsCore.model.Scoreboard;
+import fr.kstars.forgenationsCore.model.Tablist;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.format.NamedTextColor;
 import net.kyori.adventure.text.format.TextDecoration;

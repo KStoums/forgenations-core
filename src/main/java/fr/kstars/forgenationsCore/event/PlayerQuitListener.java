@@ -1,6 +1,6 @@
-package fr.kstars.forgenationscore.event;
+package fr.kstars.forgenationsCore.event;
 
-import fr.kstars.forgenationscore.model.Scoreboard;
+import fr.kstars.forgenationsCore.model.Scoreboard;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 

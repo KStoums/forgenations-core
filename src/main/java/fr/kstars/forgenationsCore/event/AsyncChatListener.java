@@ -1,4 +1,4 @@
-package fr.kstars.forgenationscore.event;
+package fr.kstars.forgenationsCore.event;
 
 import net.kyori.adventure.text.Component;
 import org.bukkit.entity.Player;

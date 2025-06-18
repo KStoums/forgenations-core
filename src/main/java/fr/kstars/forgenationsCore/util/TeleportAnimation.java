@@ -1,4 +1,4 @@
-package fr.kstars.forgenationscore.util;
+package fr.kstars.forgenationsCore.util;
 
 import com.google.common.collect.Lists;
 import org.bukkit.Location;

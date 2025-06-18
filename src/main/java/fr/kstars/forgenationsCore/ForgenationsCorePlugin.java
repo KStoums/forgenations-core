@@ -1,16 +1,16 @@
-package fr.kstars.forgenationscore;
+package fr.kstars.forgenationsCore;
 
-import fr.kstars.forgenationscore.command.*;
-import fr.kstars.forgenationscore.event.AsyncChatListener;
-import fr.kstars.forgenationscore.event.EntityDamageListener;
-import fr.kstars.forgenationscore.event.PlayerJoinListener;
-import fr.kstars.forgenationscore.event.PlayerQuitListener;
-import fr.kstars.forgenationscore.util.ChatUtil;
+import fr.kstars.forgenationsCore.command.*;
+import fr.kstars.forgenationsCore.event.AsyncChatListener;
+import fr.kstars.forgenationsCore.event.EntityDamageListener;
+import fr.kstars.forgenationsCore.event.PlayerJoinListener;
+import fr.kstars.forgenationsCore.event.PlayerQuitListener;
+import fr.kstars.forgenationsCore.util.ChatUtil;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.Objects;
 
-public final class Forgenationscore extends JavaPlugin {
+public final class ForgenationsCorePlugin extends JavaPlugin {
 
     @Override
     public void onEnable() {

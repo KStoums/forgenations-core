@@ -1,6 +1,6 @@
 name: forgenationscore
 version: '1.0.0'
-main: fr.kstars.forgenationscore.Forgenationscore
+main: fr.kstars.forgenationsCore.ForgenationsCorePlugin
 api-version: '1.21'
 author: Kstars
 commands:

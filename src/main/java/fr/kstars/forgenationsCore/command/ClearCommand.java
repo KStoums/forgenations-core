@@ -1,31 +1,27 @@
-package fr.kstars.forgenationscore.command;
+package fr.kstars.forgenationsCore.command;
 
-import fr.kstars.forgenationscore.util.ChatUtil;
+import fr.kstars.forgenationsCore.util.ChatUtil;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.format.NamedTextColor;
 import net.kyori.adventure.text.format.TextDecoration;
 import org.bukkit.Bukkit;
+import org.bukkit.Sound;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
 
-public class KillCommand implements CommandExecutor {
+public class ClearCommand implements CommandExecutor {
     @Override
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String message, @NotNull String @NotNull [] args) {
         if (!(sender instanceof Player player)) {
             return false;
         }
 
-        if (!player.isOp()) {
-            player.sendMessage(ChatUtil.ERR_NO_PERMISSION);
-            return false;
-        }
-
         if (args.length > 1) {
             player.sendMessage(ChatUtil.USAGE_PREFIX.
-                    append(Component.text("/kill <joueur> [OPTIONNEL]")));
+                    append(Component.text("/clear <joueur> [OPTIONNEL]")));
             return false;
         }
 
@@ -36,35 +32,51 @@ public class KillCommand implements CommandExecutor {
                 return false;
             }
 
-            targetPlayer.damage(targetPlayer.getHealth());
+            targetPlayer.getInventory().clear();
+
             targetPlayer.sendMessage(ChatUtil.PLUGIN_PREFIX_WITH_COLOR.
-                    append(Component.text("Vous avez été tué par un", NamedTextColor.WHITE).
+                    append(Component.text("Votre inventaire a été", NamedTextColor.WHITE).
+                            decoration(TextDecoration.BOLD, false)).
+                    appendSpace().
+                    append(Component.text("supprimé", NamedTextColor.BLUE).
+                            decoration(TextDecoration.BOLD, false)).
+                    appendSpace().
+                    append(Component.text("par un", NamedTextColor.WHITE).
                             decoration(TextDecoration.BOLD, false)).
                     appendSpace().
                     append(Component.text("Maître du Jeu", NamedTextColor.BLUE).
                             decoration(TextDecoration.BOLD, false)).
-                    appendSpace().
                     append(Component.text(".", NamedTextColor.WHITE).
                             decoration(TextDecoration.BOLD, false)));
-            targetPlayer.getWorld().strikeLightning(targetPlayer.getLocation());
+            targetPlayer.playSound(targetPlayer.getLocation(), Sound.BLOCK_LAVA_EXTINGUISH, 1, 1);
 
             player.sendMessage(ChatUtil.PLUGIN_PREFIX_WITH_COLOR.
-                    append(Component.text("Vous avez tué", NamedTextColor.WHITE).
+                    append(Component.text("Vous avez", NamedTextColor.WHITE).
+                            decoration(TextDecoration.BOLD, false)).
+                    appendSpace().
+                    append(Component.text("supprimé", NamedTextColor.BLUE).
+                            decoration(TextDecoration.BOLD, false)).
+                    appendSpace().
+                    append(Component.text("l'inventaire de",  NamedTextColor.WHITE).
                             decoration(TextDecoration.BOLD, false)).
                     appendSpace().
                     append(Component.text(targetPlayer.getName(), NamedTextColor.BLUE).
                             decoration(TextDecoration.BOLD, false)).
-                    appendSpace().
                     append(Component.text(".", NamedTextColor.WHITE).
                             decoration(TextDecoration.BOLD, false)));
             return true;
         }
 
-        player.damage(player.getHealth());
+        player.getInventory().clear();
         player.sendMessage(ChatUtil.PLUGIN_PREFIX_WITH_COLOR.
-                append(Component.text("Vous vous êtes suicidé.", NamedTextColor.WHITE).
-                        decoration(TextDecoration.BOLD, false)));
-        player.getWorld().strikeLightning(player.getLocation());
+                append(Component.text("Vous avez", NamedTextColor.WHITE).
+                        decoration(TextDecoration.BOLD, false)).
+                appendSpace().
+                append(Component.text("supprimé", NamedTextColor.BLUE).
+                        decoration(TextDecoration.BOLD, false)).
+                appendSpace().
+                append(Component.text("votre inventaire.", NamedTextColor.WHITE)));
+        player.playSound(player.getLocation(), Sound.BLOCK_LAVA_EXTINGUISH, 1, 1);
         return true;
     }
 }
