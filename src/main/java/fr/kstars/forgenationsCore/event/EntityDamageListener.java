@@ -11,13 +11,9 @@ import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 
 public class EntityDamageListener implements Listener {
-    @EventHandler(priority = EventPriority.LOW)
+    @EventHandler(priority = EventPriority.LOW, ignoreCancelled = true)
     public void onEntityDamage(org.bukkit.event.entity.EntityDamageEvent event) {
         if (!(event.getEntity() instanceof Player player)) {
-            return;
-        }
-
-        if (event.isCancelled()) {
             return;
         }
 

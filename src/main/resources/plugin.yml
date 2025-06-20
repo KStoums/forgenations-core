@@ -8,31 +8,36 @@ commands:
     description: Delete your own or a target player's inventory
     aliases: [ci]
     permission: clear.use
+    permission-message: "§4Erreur: Vous n'avez pas accès à cette commande."
   feed:
     description: Restores the hunger of yourself or a target player
     permission: feed.use
+    permission-message: "§4Erreur: Vous n'avez pas accès à cette commande."
   fly:
     description: Activates or deactivates the fly to you or a target player
     permission: fly.use
+    permission-message: "§4Erreur: Vous n'avez pas accès à cette commande."
   gamemode:
     description: Changes your own or another player's game mode
     aliases: [gm]
     permission: gamemode.use
+    permission-message: "§4Erreur: Vous n'avez pas accès à cette commande."
   heal:
     description: Heals yourself or a target player
     permission: heal.use
-  kick:
-    description: Exclude a person from the server
-    permission: kick.use
+    permission-message: "§4Erreur: Vous n'avez pas accès à cette commande."
   kill:
     description: Kills yourself or a target player
     permission: kill.use
+    permission-message: "§4Erreur: Vous n'avez pas accès à cette commande."
   spawn:
     description: Teleports you to the spawn point
   teleport:
     description: Teleports yourself or another player to a target player
     aliases: [tp]
     permission: teleport.use
+    permission-message: "§4Erreur: Vous n'avez pas accès à cette commande."
   worldchange:
     description: Transport yourself from one world to another
     permission: worldchange.use
+    permission-message: "§4Erreur: Vous n'avez pas accès à cette commande."

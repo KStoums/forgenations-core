@@ -43,7 +43,7 @@ public class PlayerJoinListener implements Listener {
 
         if (player.getWorld().getName().equals("world")) {
             player.setGameMode(GameMode.ADVENTURE);
-            player.teleport(SpawnCommand.WordSpawnLocation);
+            player.teleport(SpawnCommand.WORLD_SPAWN_LOCATION);
         }
     }
 }

@@ -34,19 +34,19 @@ public final class ForgenationsCorePlugin extends JavaPlugin {
             Objects.requireNonNull(getCommand("fly")).setExecutor(new FlyCommand());
             Objects.requireNonNull(getCommand("gamemode")).setExecutor(new GamemodeCommand());
             Objects.requireNonNull(getCommand("heal")).setExecutor(new HealCommand());
-            Objects.requireNonNull(getCommand("kick")).setExecutor(new KickCommand());
             Objects.requireNonNull(getCommand("kill")).setExecutor(new KillCommand());
-            Objects.requireNonNull(getCommand("spawn")).setExecutor(new SpawnCommand());
+            Objects.requireNonNull(getCommand("spawn")).setExecutor(new SpawnCommand(this));
             Objects.requireNonNull(getCommand("teleport")).setExecutor(new TeleportCommand());
             Objects.requireNonNull(getCommand("worldchange")).setExecutor(new WorldChangeCommand());
 
             //Events
-            //TODO ADD EVENT WHEN PLAYER DIE WHEN RESPAWN IS TELEPORTED TO WORLD SPAWN LOCATION
+            getServer().getPluginManager().registerEvents(new PlayerRespawnListener(), this);
             getServer().getPluginManager().registerEvents(new AsyncChatListener(), this);
             getServer().getPluginManager().registerEvents(new EntityDamageListener(), this);
             getServer().getPluginManager().registerEvents(new PlayerJoinListener(jsonPlayerRepository), this);
             getServer().getPluginManager().registerEvents(new PlayerQuitListener(), this);
             getServer().getPluginManager().registerEvents(new BlockBreakListener(), this);
+            getServer().getPluginManager().registerEvents(new PlayerMoveListener(), this);
         } catch (Exception e) {
             getLogger().severe(e.getMessage());
         }
